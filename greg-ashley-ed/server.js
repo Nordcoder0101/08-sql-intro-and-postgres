@@ -5,12 +5,13 @@ const express = require('express');
 
 const bodyParser = require('body-parser');
 const pg = require('pg');
-const Client = new pg.Client();
+// const Client = new pg.Client();
 // const { Client } = require('pg')
 const PORT = process.env.PORT || 3000;
-const DATABASE_URL = 'postgres://localhost:5432/users'
-const client = new Client(DATABASE_URL)
 const app = express();
+const DATABASE_URL = 'postgres://postgres:098Nectar!@localhost:5432/kilovolt'
+const client = new pg.Client(DATABASE_URL)
+
 
 // REVIEW: Use the client object to connect to our DB.
 client.connect();
